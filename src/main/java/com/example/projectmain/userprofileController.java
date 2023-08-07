@@ -73,22 +73,38 @@ public class userprofileController {
     }
 
     @FXML
-    void notification_function(ActionEvent event) {
+    void notification_function(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(getClass().getResource("notification.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 
     }
 
     @FXML
-    void paymentHistory_function(ActionEvent event) {
+    void paymentHistory_function(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("paymentS.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 
     }
+
 
     @FXML
-    void security_function(ActionEvent event) {
+    void settings_function(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(getClass().getResource("upsettings.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 
     }
 
-    @FXML
-    void settings_function(ActionEvent event) {
 
-    }
+
 }
