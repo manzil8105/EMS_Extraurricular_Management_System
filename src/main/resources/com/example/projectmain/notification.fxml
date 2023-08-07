@@ -3,11 +3,11 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="520.0" prefWidth="634.0" style="-fx-background-color: #f7a100;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectmain.userprofileController">
+<AnchorPane prefHeight="702.0" prefWidth="866.0" style="-fx-background-color: #f7a100;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectmain.userprofileController">
    <children>
-      <AnchorPane layoutX="14.0" layoutY="15.0" prefHeight="491.0" prefWidth="606.0" style="-fx-background-color: #181f2b;">
+      <AnchorPane layoutX="14.0" layoutY="15.0" prefHeight="675.0" prefWidth="841.0" style="-fx-background-color: #181f2b;">
          <children>
-            <Button fx:id="backBS" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="41.0" text="&lt;" />
+            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#toDoBack" prefHeight="38.0" prefWidth="41.0" style="-fx-background-color: #f7a100;" text="&lt;" />
          </children>
       </AnchorPane>
    </children>

@@ -33,7 +33,7 @@ public class userprofileController {
     private DatePicker dob_field_pros;
 
     @FXML
-    private Button edit_profile;
+    private Button club_names;
 
     @FXML
     private TextField email_field_pros;
@@ -70,6 +70,7 @@ public class userprofileController {
     @FXML
     void add_pic_function(ActionEvent event) {
 
+
     }
 
     @FXML
@@ -79,6 +80,7 @@ public class userprofileController {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
 
     }
@@ -89,6 +91,7 @@ public class userprofileController {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
 
     }
@@ -101,6 +104,29 @@ public class userprofileController {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+
+    }
+
+    @FXML
+    void toDoBack(ActionEvent event) throws  IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("userprofile.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+
+    }
+    @FXML
+    void clubnames(ActionEvent event) throws IOException{
+
+        Parent root = FXMLLoader.load(getClass().getResource("Clubnames.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
 
     }
