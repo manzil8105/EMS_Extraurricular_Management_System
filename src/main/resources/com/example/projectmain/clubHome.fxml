@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: #181f2b;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectmain.clubProfileController">
+   <children>
+      <ScrollPane fx:id="options" layoutX="29.0" layoutY="90.0" prefHeight="575.0" prefWidth="247.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="669.0" prefWidth="239.0" style="-fx-background-color: #f7a100;">
+               <children>
+                  <Button fx:id="committeeMembers" alignment="CENTER" layoutX="33.0" layoutY="55.0" mnemonicParsing="false" onAction="#buttonComMemberlist" prefHeight="30.0" prefWidth="137.0" style="-fx-background-color: #181f2b;" text="Commitee Members" textFill="WHITE" />
+                  <Button fx:id="memberList" layoutX="33.0" layoutY="85.0" mnemonicParsing="false" onAction="#buttonMemberlist" prefHeight="30.0" prefWidth="137.0" style="-fx-background-color: #181f2b;" text="Members" textAlignment="CENTER" textFill="WHITE" />
+                  <Button fx:id="photoGallery" layoutX="33.0" layoutY="115.0" mnemonicParsing="false" onAction="#buttonPhotoGal" prefHeight="30.0" prefWidth="137.0" style="-fx-background-color: #181f2b;" text="Photo Gallery" textFill="WHITE" />
+                  <Button fx:id="upcomingEvents" layoutX="33.0" layoutY="265.0" mnemonicParsing="false" onAction="#buttonUpcomingEvents" prefHeight="30.0" prefWidth="137.0" style="-fx-background-color: #181f2b;" text="Upcoming events " textFill="WHITE" />
+                  <Button fx:id="evaluate" layoutX="33.0" layoutY="205.0" mnemonicParsing="false" onAction="#buttonEval" prefHeight="30.0" prefWidth="137.0" style="-fx-background-color: #181f2b;" text="Evaluate" textFill="WHITE" />
+                  <Button fx:id="reportAnalytics" layoutX="33.0" layoutY="235.0" mnemonicParsing="false" onAction="#buttonreportAnalytics" prefHeight="30.0" prefWidth="137.0" style="-fx-background-color: #181f2b;" text="Reports &amp; Analytics" textFill="WHITE" />
+                  <Button fx:id="activities" layoutX="33.0" layoutY="145.0" mnemonicParsing="false" onAction="#buttonActivity" prefHeight="30.0" prefWidth="137.0" style="-fx-background-color: #181f2b;" text="Activities" textFill="WHITE" />
+                  <Button fx:id="registerForEvent" layoutX="33.0" layoutY="175.0" mnemonicParsing="false" onAction="#buttonRegister" prefHeight="30.0" prefWidth="137.0" style="-fx-background-color: #181f2b;" text="RegisterForEvent" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <ScrollPane layoutX="306.0" layoutY="88.0" prefHeight="582.0" prefWidth="482.0" style="-fx-background-color: #00008B;">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="670.0" prefWidth="474.0" style="-fx-background-color: #f7a100;" />
+        </content>
+      </ScrollPane>
+      <Label alignment="CENTER" layoutX="224.0" layoutY="17.0" prefHeight="44.0" prefWidth="316.0" text="CLUB NAME" textFill="#e76311">
+         <font>
+            <Font name="Georgia Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="back" layoutX="14.0" layoutY="27.0" mnemonicParsing="false" onAction="#goBac" prefHeight="22.0" prefWidth="31.0" style="-fx-background-color: #f7a100;" text="&lt;">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
