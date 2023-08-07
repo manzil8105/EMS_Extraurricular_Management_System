@@ -15,6 +15,8 @@ public class Main extends Application {
         stage.setTitle("Primary homepage");
         stage.setScene(scene);
         stage.show();
+
+        // irin was here
     }
 
     public static void main(String[] args) {
