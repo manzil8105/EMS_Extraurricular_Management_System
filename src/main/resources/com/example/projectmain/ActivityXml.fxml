@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: #181f2b;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectmain.clubProfileController">
+   <children>
+      <ScrollPane layoutX="25.0" layoutY="13.0" prefHeight="674.0" prefWidth="750.0" style="-fx-background-color: #00008B;">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="694.0" prefWidth="736.0" style="-fx-background-color: #f7a100;">
+               <children>
+                  <Button fx:id="gobacFromMembers" layoutX="14.0" layoutY="34.0" mnemonicParsing="false" onAction="#goback" prefHeight="18.0" prefWidth="102.0" style="-fx-background-color: #181f2b;" text="&lt;--GoBack" textFill="WHITE" />
+                  <Button layoutX="230.0" layoutY="240.0" mnemonicParsing="false" text="Button" />
+               </children></AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
