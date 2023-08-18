@@ -89,7 +89,7 @@ public class clubProfileController {
 
     @FXML
     private void buttonPhotoGal(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("PhotoGall.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Photo_Gallery.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
