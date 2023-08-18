@@ -9,6 +9,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
+
+
+
+
 import java.io.IOException;
 
 public class mainController {
@@ -20,10 +24,27 @@ public class mainController {
     @FXML
     Button back;
 
+    @FXML
+    private Button CreateGroup;
+
+    @FXML
+    private Button Logout;
+
+    @FXML
+    private Button Notifications;
+
+    @FXML
+    private Button Privatefiles;
+
+    @FXML
+    private Button chats;
+
+
+
 
     @FXML
     private void switchToUser(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("userprofile.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("userProfileN.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -38,4 +59,38 @@ public class mainController {
         stage.setScene(scene);
         stage.show();
     }
+
+    @FXML
+    void logOut(ActionEvent event) {
+
+    }
+
+    @FXML
+    void privatefiles(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("private_files.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
+    @FXML
+    void switchToChat(ActionEvent event) {
+
+    }
+
+
+    @FXML
+    void switchToCreateGroup(ActionEvent event) {
+
+    }
+
+    @FXML
+    void switchToNotifications(ActionEvent event) {
+
+    }
+
+
+
 }

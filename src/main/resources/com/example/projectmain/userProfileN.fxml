@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="588.0" prefWidth="705.0" style="-fx-background-color: #181f2b;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectmain.userProfileNController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="8.0" prefHeight="573.0" prefWidth="685.0" style="-fx-background-color: #f7a100;">
+         <children>
+            <ImageView fx:id="profilePic_pros" fitHeight="174.0" fitWidth="166.0" layoutX="91.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Image/arthur.JPG" />
+               </image></ImageView>
+            <Text layoutX="302.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="41.13671875" />
+            <Text layoutX="302.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" wrappingWidth="41.13671875" />
+            <Text layoutX="302.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mail" wrappingWidth="41.13671875" />
+            <Button fx:id="myClubs" layoutX="233.0" layoutY="287.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="221.0" style="-fx-background-color: #181f2b; -fx-background-radius: 30;" text="My Clubs" textFill="#dd9709">
+               <font>
+                  <Font name="Bernard MT Condensed" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="proSettings" layoutX="233.0" layoutY="353.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="221.0" style="-fx-background-color: #181f2b; -fx-background-radius: 30;" text="Profile Settings" textFill="#dd9709">
+               <font>
+                  <Font name="Bernard MT Condensed" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="paymentHistory" layoutX="233.0" layoutY="416.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="221.0" style="-fx-background-color: #181f2b; -fx-background-radius: 30;" text="Payment History" textFill="#dd9709">
+               <font>
+                  <Font name="Bernard MT Condensed" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="Notifications" layoutX="233.0" layoutY="487.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="221.0" style="-fx-background-color: #181f2b; -fx-background-radius: 30;" text="Notifications" textFill="#dd9709">
+               <font>
+                  <Font name="Bernard MT Condensed" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="44.0" fitWidth="50.0" layoutX="174.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Image/icons8-users-settings-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="44.0" fitWidth="44.0" layoutX="174.0" layoutY="416.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Image/icons8-payment-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="44.0" fitWidth="66.0" layoutX="174.0" layoutY="487.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Image/icons8-notification-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="44.0" fitWidth="54.0" layoutX="174.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Image/icons8-extracurricular-activities-32.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="nameField_pros" layoutX="350.0" layoutY="90.0" prefHeight="25.0" prefWidth="252.0" />
+            <Label fx:id="ID_fieldPros" layoutX="350.0" layoutY="115.0" prefHeight="25.0" prefWidth="252.0" />
+            <Label fx:id="mailField_pros" layoutX="350.0" layoutY="140.0" prefHeight="25.0" prefWidth="252.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
