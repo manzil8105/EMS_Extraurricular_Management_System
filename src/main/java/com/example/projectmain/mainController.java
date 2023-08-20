@@ -48,6 +48,7 @@ public class mainController {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setTitle("Profile");
         stage.show();
     }
 
@@ -57,12 +58,18 @@ public class mainController {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setTitle("Club");
         stage.show();
     }
 
     @FXML
-    void logOut(ActionEvent event) {
-
+    void logOut(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Login");
+        stage.show();
     }
 
     @FXML
@@ -71,8 +78,8 @@ public class mainController {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setTitle("Private Files");
         stage.show();
-
     }
 
     @FXML
