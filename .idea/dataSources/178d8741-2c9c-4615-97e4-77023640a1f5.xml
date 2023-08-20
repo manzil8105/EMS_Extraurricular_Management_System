@@ -9,8 +9,8 @@
     </root>
     <schema id="2" parent="1" name="buao2mvep5jvwqhexgvz">
       <Current>1</Current>
-      <IntrospectionTimestamp>2023-08-20.14:23:31</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-08-20.08:23:31</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-08-20.23:53:51</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-08-20.17:53:50</LocalIntrospectionTimestamp>
     </schema>
     <schema id="3" parent="1" name="information_schema"/>
     <table id="4" parent="2" name="user">
@@ -47,12 +47,16 @@
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <index id="11" parent="4" name="PRIMARY">
+    <column id="11" parent="4" name="dp">
+      <DasType>longblob|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <index id="12" parent="4" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="12" parent="4" name="PRIMARY">
+    <key id="13" parent="4" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

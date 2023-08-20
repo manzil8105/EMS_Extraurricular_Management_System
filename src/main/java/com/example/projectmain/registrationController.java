@@ -7,11 +7,17 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.io.*;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Objects;
@@ -31,6 +37,14 @@ public class registrationController {
     private PasswordField password;
     @FXML
     private PasswordField confirmPassword;
+    private FileInputStream fileInputStream;
+
+    @FXML
+    private void fileChooserButton(ActionEvent event) throws FileNotFoundException {
+        FileChooser fileChooser = new FileChooser();
+        File file = fileChooser.showOpenDialog(null);
+        fileInputStream = new FileInputStream(file);
+    }
 
     @FXML
     private void registration(ActionEvent event) throws IOException, SQLException {
@@ -50,10 +64,20 @@ public class registrationController {
             alert.setContentText("Password dose not match!");
             alert.showAndWait();
         } else {
-            String sql = "INSERT INTO user (name, id, phoneNumber, email, department, password) " +
-                    "VALUES('" + name.getText() + "', '" + id.getText() + "', '" + phoneNumber.getText() + "', '" + email.getText() + "', '" + department.getText() + "', '" + password.getText() + "')";
+            PreparedStatement preparedStatement = DriverManager.getConnection(
+                    "jdbc:mysql://buao2mvep5jvwqhexgvz-mysql.services.clever-cloud.com:3306/buao2mvep5jvwqhexgvz",
+                    "un3qv8gp39vnbmmw",
+                    "4sudsBiVeHXYfXS8nlph").prepareStatement("INSERT INTO user VALUE (?, ?, ?, ?, ?, ?, ?)");
 
-            DB.conn().executeUpdate(sql);
+            preparedStatement.setString(1, name.getText());
+            preparedStatement.setString(2, id.getText());
+            preparedStatement.setString(3, phoneNumber.getText());
+            preparedStatement.setString(4, email.getText());
+            preparedStatement.setString(5, department.getText());
+            preparedStatement.setString(6, password.getText());
+            preparedStatement.setBinaryStream(7, fileInputStream);
+
+            preparedStatement.executeUpdate();
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Success!");

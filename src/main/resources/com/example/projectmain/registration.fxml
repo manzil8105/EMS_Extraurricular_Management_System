@@ -11,7 +11,7 @@
         <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="572.0" prefWidth="770.0" style="-fx-background-color: #181f2b;">
             <children>
                 <TextField fx:id="phoneNumber" layoutX="260.0" layoutY="135.0" prefHeight="40.0" prefWidth="250.0" promptText="phone number" />
-                <Button layoutX="310.0" layoutY="388.0" mnemonicParsing="false" onAction="#registration" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #f7a100; -fx-background-radius: 30;" text="Registration">
+                <Button layoutX="310.0" layoutY="434.0" mnemonicParsing="false" onAction="#registration" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #f7a100; -fx-background-radius: 30;" text="Registration">
                     <font>
                         <Font size="20.0" />
                     </font>
@@ -20,13 +20,18 @@
             <TextField fx:id="id" layoutX="260.0" layoutY="86.0" prefHeight="40.0" prefWidth="250.0" promptText="id" />
             <TextField fx:id="email" layoutX="260.0" layoutY="183.0" prefHeight="40.0" prefWidth="250.0" promptText="email" />
             <TextField fx:id="department" layoutX="260.0" layoutY="231.0" prefHeight="40.0" prefWidth="250.0" promptText="department" />
-            <Button layoutX="310.0" layoutY="485.0" mnemonicParsing="false" onAction="#login" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #f7a100; -fx-background-radius: 30;" text="Login">
+            <Button layoutX="310.0" layoutY="502.0" mnemonicParsing="false" onAction="#login" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #f7a100; -fx-background-radius: 30;" text="Login">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
             <PasswordField fx:id="password" layoutX="260.0" layoutY="279.0" prefHeight="40.0" prefWidth="250.0" promptText="password" />
             <PasswordField fx:id="confirmPassword" layoutX="260.0" layoutY="328.0" prefHeight="40.0" prefWidth="250.0" promptText="confirm password" />
+            <Button layoutX="281.0" layoutY="379.0" mnemonicParsing="false" onAction="#fileChooserButton" text="Upload Profile Picture">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
             </children>
         </AnchorPane>
     </children>

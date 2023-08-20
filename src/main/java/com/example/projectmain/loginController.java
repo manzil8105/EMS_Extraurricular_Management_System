@@ -36,7 +36,12 @@ public class loginController {
             ResultSet resultSet = DB.conn().executeQuery(sql);
 
             if (resultSet.next()) {
-                Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("main.fxml"));
+                Parent root = loader.load();
+
+                mainController mainController = loader.getController();
+                mainController.setUsername(resultSet.getString("id"));
+
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
