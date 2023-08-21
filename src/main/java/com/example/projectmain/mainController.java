@@ -11,10 +11,8 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 
-
-
-
 import java.io.IOException;
+import java.net.Socket;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -49,7 +47,7 @@ public class mainController {
 
     @FXML
     private void switchToUser(ActionEvent event) throws IOException, SQLException {
-        FXMLLoader loader = new  FXMLLoader(getClass().getResource("userProfile.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("userProfile.fxml"));
         Parent root = loader.load();
 
         userProfileController userProfileController = loader.getController();
@@ -64,7 +62,7 @@ public class mainController {
 
     @FXML
     private void switchToClub(ActionEvent event) throws IOException, SQLException {
-        FXMLLoader loader = new  FXMLLoader(getClass().getResource("Clubnames.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Clubnames.fxml"));
         Parent root = loader.load();
 
         ClubnamesController clubnamesController = loader.getController();
@@ -98,14 +96,19 @@ public class mainController {
     }
 
     @FXML
-    void switchToChat(ActionEvent event) {
-
+    void switchToChat(ActionEvent event) throws IOException, SQLException {
+        Parent root = FXMLLoader.load(getClass().getResource("client.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Private Files");
+        stage.show();
     }
 
 
     @FXML
     void switchToCreateGroup(ActionEvent event) throws IOException {
-        FXMLLoader loader = new  FXMLLoader(getClass().getResource("createClub.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("createClub.fxml"));
         Parent root = loader.load();
 
         createClubController createClubController = loader.getController();
