@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="702.0" prefWidth="865.0" style="-fx-background-color: #f7a100;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectmain.userprofileController">
+<AnchorPane prefHeight="702.0" prefWidth="865.0" style="-fx-background-color: #f7a100;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectmain.ClubnamesController">
    <children>
       <AnchorPane layoutX="7.0" layoutY="12.0" prefHeight="683.0" prefWidth="849.0" style="-fx-background-color: #181f2b;">
          <children>
             <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#toDoBack" prefHeight="38.0" prefWidth="41.0" style="-fx-background-color: #f7a100;" text="&lt;" />
+            <Label fx:id="id" layoutX="695.0" layoutY="43.0" style="-fx-text-fill: #f7a100;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ScrollPane layoutX="177.0" layoutY="146.0" prefHeight="400.0" prefWidth="500.0">
+               <content>
+                  <VBox fx:id="vBox" minHeight="400.0" prefWidth="480.0" style="-fx-background-color: #f7a100;" />
+               </content>
+            </ScrollPane>
          </children>
       </AnchorPane>
    </children>

@@ -6,174 +6,86 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class clubProfileController {
+    @FXML
+    private Label id;
+    @FXML
+    private Label club_name;
 
-//    @FXML
-//    private ScrollPane options;
+    public void setId(String id, String club_name) {
+        this.id.setText(id);
+        this.club_name.setText(club_name);
+    }
+
 
     @FXML
-    private Button committeeMembers;
+    private void buttonMemberlist(ActionEvent event) throws SQLException {
+        String sql = "SELECT member_id FROM club_member WHERE club_name = '" + club_name.getText() + "'";
+        ResultSet resultSet = DB.conn().createStatement().executeQuery(sql);
 
-    @FXML
-    private Button memberList;
+        String member = "";
+        while (resultSet.next()) {
+            sql = "SELECT * FROM user WHERE id = '" + resultSet.getString("member_id") + "'";
+            ResultSet resultSet1 = DB.conn().createStatement().executeQuery(sql);
 
-    @FXML
-    private Button photoGallery;
+            if (resultSet1.next())
+                member += String.format("%-30s", resultSet1.getString("name"));
+                member += String.format("%-20s", resultSet1.getString("id"));
+                member += String.format("%-20s", resultSet1.getString("phoneNumber"));
+                member += "\n";
+        }
 
-    @FXML
-    private Button upcomingEvents;
-
-    @FXML
-    private Button activities;
-
-    @FXML
-    private Button registerForEvent;
-
-    @FXML
-    private Button evaluate;
-
-    @FXML
-    private Button reportAnalytics;
-
-    @FXML
-    private Button gobacFromMembers;
-
-    @FXML
-    private Button gobacFromPhotos;
-
-    @FXML
-    private Button gobacFromActivities;
-
-    @FXML
-    private Button gobacFromRegistration;
-
-    @FXML
-    private Button gobacFromEval;
-
-    @FXML
-    private Button gobacFromReportAnalytics;
-
-    @FXML
-    private Button gobacFromUpcomingEvents;
-
-    @FXML
-    private Button gobacFromComMembers;
-    @FXML
-    private void buttonMemberlist(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Memberlist.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
-
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Member List");
+        alert.setHeaderText("Member of " + club_name.getText());
+        alert.setContentText(member);
+        alert.showAndWait();
     }
 
     @FXML
-    private void buttonComMemberlist(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("ComMemberlist.fxml"));
+    private void buttonActivity(ActionEvent event) throws IOException, SQLException {
+        FXMLLoader loader = new  FXMLLoader(getClass().getResource("Activity.fxml"));
+        Parent root = loader.load();
+
+        ActivityController activityController = loader.getController();
+        activityController.setId(this.id.getText(), this.club_name.getText());
+
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setTitle("Activity");
         stage.show();
-
-
-    }
-
-    @FXML
-    private void buttonPhotoGal(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Photo_Gallery.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
-
-    }
-
-    @FXML
-    private void buttonActivity(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("ActivityXml.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
-
     }
 
     @FXML
     private void buttonRegister(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("RegForevent.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
-
-    }
-
-    @FXML
-    private void buttonEval(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Eval.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
-
-    }
-
-    @FXML
-    private void buttonreportAnalytics(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("ReportAnalytics.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
 
     }
 
     @FXML
     private void buttonUpcomingEvents(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Upcomingevents.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
 
     }
 
     @FXML
-    private void goback(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("clubHome.fxml"));
+    private void goBac(ActionEvent event) throws IOException, SQLException {
+        FXMLLoader loader = new  FXMLLoader(getClass().getResource("Clubnames.fxml"));
+        Parent root = loader.load();
+
+        ClubnamesController clubnamesController = loader.getController();
+        clubnamesController.setId(this.id.getText());
+
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setTitle("Club");
         stage.show();
     }
-
-    @FXML
-    Button back;
-
-    @FXML
-    private void goBac(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-
-
 }
