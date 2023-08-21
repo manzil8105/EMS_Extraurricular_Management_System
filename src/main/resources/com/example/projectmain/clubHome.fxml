@@ -2,74 +2,33 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="637.0" prefWidth="915.0" style="-fx-background-color: #181f2b;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectmain.clubProfileController">
    <children>
-      <Label alignment="CENTER" layoutX="300.0" layoutY="27.0" prefHeight="44.0" prefWidth="316.0" text="CLUB NAME" textFill="#e76311">
+      <Label fx:id="club_name" alignment="CENTER" layoutX="300.0" layoutY="27.0" prefHeight="44.0" prefWidth="316.0" textFill="#e76311">
          <font>
             <Font name="Georgia Bold" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="back" layoutX="14.0" layoutY="27.0" mnemonicParsing="false" onAction="#goBac" prefHeight="22.0" prefWidth="31.0" style="-fx-background-color: #f7a100;" text="&lt;">
+      <Button layoutX="14.0" layoutY="27.0" mnemonicParsing="false" onAction="#goBac" prefHeight="22.0" prefWidth="31.0" style="-fx-background-color: #f7a100;" text="&lt;">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
       <AnchorPane layoutX="14.0" layoutY="77.0" prefHeight="538.0" prefWidth="871.0" style="-fx-background-color: #f7a100;">
          <children>
-            <Button fx:id="reportAnalytics" layoutX="172.0" layoutY="85.0" mnemonicParsing="false" onAction="#buttonreportAnalytics" prefHeight="50.0" prefWidth="149.0" style="-fx-background-color: #181f2b; -fx-background-radius: 30;" text="Reports &amp; Analytics" textFill="WHITE" />
-            <Button fx:id="evaluate" layoutX="605.0" layoutY="401.0" mnemonicParsing="false" onAction="#buttonEval" prefHeight="50.0" prefWidth="161.0" style="-fx-background-color: #181f2b; -fx-background-radius: 30;" text="Evaluate" textFill="WHITE" />
-            <Button fx:id="registerForEvent" layoutX="616.0" layoutY="85.0" mnemonicParsing="false" onAction="#buttonRegister" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: #181f2b; -fx-background-radius: 30;" text="RegisterForEvent" textFill="WHITE" />
-            <Button fx:id="upcomingEvents" layoutX="608.0" layoutY="292.0" mnemonicParsing="false" onAction="#buttonUpcomingEvents" prefHeight="50.0" prefWidth="155.0" style="-fx-background-color: #181f2b; -fx-background-radius: 30;" text="Upcoming events " textFill="WHITE" />
-            <Button fx:id="photoGallery" layoutX="608.0" layoutY="187.0" mnemonicParsing="false" onAction="#buttonPhotoGal" prefHeight="50.0" prefWidth="155.0" style="-fx-background-color: #181f2b; -fx-background-radius: 30;" text="Photo Gallery" textFill="WHITE" />
-            <Button fx:id="memberList" layoutX="163.0" layoutY="401.0" mnemonicParsing="false" onAction="#buttonMemberlist" prefHeight="50.0" prefWidth="155.0" style="-fx-background-color: #181f2b; -fx-background-radius: 30;" text="Members" textAlignment="CENTER" textFill="WHITE" />
-            <Button fx:id="activities" layoutX="166.0" layoutY="190.0" mnemonicParsing="false" onAction="#buttonActivity" prefHeight="44.0" prefWidth="161.0" style="-fx-background-color: #181f2b; -fx-background-radius: 30;" text="Activities" textFill="WHITE" />
-            <Button fx:id="committeeMembers" alignment="CENTER" layoutX="160.0" layoutY="300.0" mnemonicParsing="false" onAction="#buttonComMemberlist" prefHeight="50.0" prefWidth="161.0" style="-fx-background-color: #181f2b; -fx-background-radius: 30;" text="Commitee Members" textFill="WHITE" />
-            <ImageView fitHeight="34.0" fitWidth="44.0" layoutX="109.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Image/icons8-report-32.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="34.0" fitWidth="44.0" layoutX="109.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Image/icons8-activities-32.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="34.0" fitWidth="44.0" layoutX="109.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Image/icons8-committee-32.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="34.0" fitWidth="44.0" layoutX="109.0" layoutY="403.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Image/icons8-people-32.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="34.0" fitWidth="44.0" layoutX="533.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Image/icons8-registration-32.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="34.0" fitWidth="44.0" layoutX="533.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Image/icons8-photo-32.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="34.0" fitWidth="44.0" layoutX="533.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Image/icons8-event-accepted-tentatively-32.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="34.0" fitWidth="44.0" layoutX="533.0" layoutY="409.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Image/icons8-report-card-32.png" />
-               </image>
-            </ImageView>
+            <Button layoutX="497.0" layoutY="135.0" mnemonicParsing="false" onAction="#buttonRegister" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: #181f2b; -fx-background-radius: 30;" text="RegisterForEvent" textFill="WHITE" />
+            <Button layoutX="492.0" layoutY="246.0" mnemonicParsing="false" onAction="#buttonUpcomingEvents" prefHeight="50.0" prefWidth="155.0" style="-fx-background-color: #181f2b; -fx-background-radius: 30;" text="Upcoming events " textFill="WHITE" />
+            <Button layoutX="215.0" layoutY="244.0" mnemonicParsing="false" onAction="#buttonMemberlist" prefHeight="50.0" prefWidth="155.0" style="-fx-background-color: #181f2b; -fx-background-radius: 30;" text="Members" textAlignment="CENTER" textFill="WHITE" />
+            <Button layoutX="207.0" layoutY="137.0" mnemonicParsing="false" onAction="#buttonActivity" prefHeight="44.0" prefWidth="161.0" style="-fx-background-color: #181f2b; -fx-background-radius: 30;" text="Activities" textFill="WHITE" />
          </children>
       </AnchorPane>
+      <Label fx:id="id" layoutX="791.0" layoutY="30.0" style="-fx-text-fill: #f7a100;">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

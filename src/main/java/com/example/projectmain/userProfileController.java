@@ -32,7 +32,7 @@ public class userProfileController {
 
     public void setId(String id) throws SQLException, IOException {
         String sql = "SELECT * FROM user WHERE id = '" + id + "'";
-        ResultSet resultSet = DB.conn().executeQuery(sql);
+        ResultSet resultSet = DB.conn().createStatement().executeQuery(sql);
 
         resultSet.next();
         ID_fieldPros.setText(resultSet.getString("id"));

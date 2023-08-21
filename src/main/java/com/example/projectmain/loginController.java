@@ -33,7 +33,7 @@ public class loginController {
             alert.showAndWait();
         } else {
             String sql = "SELECT * FROM user WHERE id = '" + id.getText() + "' and password = '" + password.getText() + "'";
-            ResultSet resultSet = DB.conn().executeQuery(sql);
+            ResultSet resultSet = DB.conn().createStatement().executeQuery(sql);
 
             if (resultSet.next()) {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("main.fxml"));

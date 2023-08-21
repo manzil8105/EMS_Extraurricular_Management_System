@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: #181f2b;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectmain.createClubController">
+   <children>
+      <AnchorPane layoutX="13.0" layoutY="13.0" minHeight="0.0" minWidth="0.0" prefHeight="675.0" prefWidth="770.0" style="-fx-background-color: #f7a100;">
+         <children>
+            <Button fx:id="gobacFromMembers" layoutX="14.0" layoutY="34.0" mnemonicParsing="false" onAction="#goback" prefHeight="18.0" prefWidth="102.0" style="-fx-background-color: #181f2b;" text="&lt;--GoBack" textFill="WHITE" />
+            <Label fx:id="id" layoutX="607.0" layoutY="38.0" style="-fx-text-fill: #181f2b;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="name" layoutX="260.0" layoutY="158.0" prefHeight="40.0" prefWidth="250.0" promptText="name">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="club_id" layoutX="260.0" layoutY="210.0" prefHeight="40.0" prefWidth="250.0" promptText="id">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextArea fx:id="bio" layoutX="260.0" layoutY="262.0" prefHeight="100.0" prefWidth="250.0" promptText="bio" wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextArea>
+            <Button layoutX="285.0" layoutY="437.0" mnemonicParsing="false" onAction="#createClub" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #181f2b; -fx-text-fill: #f7a100; -fx-background-radius: 30;" text="Create Club">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

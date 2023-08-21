@@ -64,10 +64,7 @@ public class registrationController {
             alert.setContentText("Password dose not match!");
             alert.showAndWait();
         } else {
-            PreparedStatement preparedStatement = DriverManager.getConnection(
-                    "jdbc:mysql://buao2mvep5jvwqhexgvz-mysql.services.clever-cloud.com:3306/buao2mvep5jvwqhexgvz",
-                    "un3qv8gp39vnbmmw",
-                    "4sudsBiVeHXYfXS8nlph").prepareStatement("INSERT INTO user VALUE (?, ?, ?, ?, ?, ?, ?)");
+            PreparedStatement preparedStatement = DB.conn().prepareStatement("INSERT INTO user VALUE (?, ?, ?, ?, ?, ?, ?)");
 
             preparedStatement.setString(1, name.getText());
             preparedStatement.setString(2, id.getText());

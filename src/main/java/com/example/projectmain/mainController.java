@@ -63,8 +63,13 @@ public class mainController {
     }
 
     @FXML
-    private void switchToClub(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("clubHome.fxml"));
+    private void switchToClub(ActionEvent event) throws IOException, SQLException {
+        FXMLLoader loader = new  FXMLLoader(getClass().getResource("Clubnames.fxml"));
+        Parent root = loader.load();
+
+        ClubnamesController clubnamesController = loader.getController();
+        clubnamesController.setId(idLabel.getText());
+
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -99,15 +104,17 @@ public class mainController {
 
 
     @FXML
-    void switchToCreateGroup(ActionEvent event) {
+    void switchToCreateGroup(ActionEvent event) throws IOException {
+        FXMLLoader loader = new  FXMLLoader(getClass().getResource("createClub.fxml"));
+        Parent root = loader.load();
 
+        createClubController createClubController = loader.getController();
+        createClubController.setId(idLabel.getText());
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Create Club");
+        stage.show();
     }
-
-    @FXML
-    void switchToNotifications(ActionEvent event) {
-
-    }
-
-
-
 }
