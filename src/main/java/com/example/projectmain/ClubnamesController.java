@@ -82,9 +82,10 @@ public class ClubnamesController {
                 join.setStyle("-fx-background-color:  #181f2b; -fx-text-fill:  #f7a100; -fx-background-radius: 30; -fx-font-size: 20; -fx-padding: 20px; -fx-border-insets: 10px; -fx-background-insets: 10px;");
                 join.setOnAction(event -> {
                     try {
-                        PreparedStatement preparedStatement = DB.conn().prepareStatement("INSERT INTO club_member VALUE (?, ?)");
+                        PreparedStatement preparedStatement = DB.conn().prepareStatement("INSERT INTO club_member VALUE (?, ?, ?)");
                         preparedStatement.setString(1, club_name.getText());
                         preparedStatement.setString(2, this.id.getText());
+                        preparedStatement.setBoolean(3, false);
                         preparedStatement.executeUpdate();
                     } catch (SQLException e) {
                         throw new RuntimeException(e);
