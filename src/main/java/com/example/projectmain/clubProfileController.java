@@ -37,9 +37,9 @@ public class clubProfileController {
 
             if (resultSet1.next())
                 member += String.format("%-30s", resultSet1.getString("name"));
-                member += String.format("%-20s", resultSet1.getString("id"));
-                member += String.format("%-20s", resultSet1.getString("phoneNumber"));
-                member += "\n";
+            member += String.format("%-20s", resultSet1.getString("id"));
+            member += String.format("%-20s", resultSet1.getString("phoneNumber"));
+            member += "\n";
         }
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -51,7 +51,7 @@ public class clubProfileController {
 
     @FXML
     private void buttonActivity(ActionEvent event) throws IOException, SQLException {
-        FXMLLoader loader = new  FXMLLoader(getClass().getResource("Activity.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Activity.fxml"));
         Parent root = loader.load();
 
         ActivityController activityController = loader.getController();
@@ -65,18 +65,50 @@ public class clubProfileController {
     }
 
     @FXML
-    private void buttonRegister(ActionEvent event) throws IOException {
+    private void buttonRegister(ActionEvent event) throws IOException, SQLException {
+        String sql = "SELECT * FROM  club_member WHERE club_name = '" + this.club_name.getText() + "' and member_id = '" + this.id.getText() + "'";
+        ResultSet resultSet = DB.conn().createStatement().executeQuery(sql);
 
+        resultSet.next();
+        if (resultSet.getBoolean("is_admin")) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("registrationEvent.fxml"));
+            Parent root = loader.load();
+
+            RegistrationEventController registrationEventController = loader.getController();
+            registrationEventController.setId(this.id.getText(), this.club_name.getText());
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.setTitle("Register Event");
+            stage.show();
+        } else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error!");
+            alert.setHeaderText("Permission Denied!");
+            alert.setContentText("You are not an Admin. You can not create an even!");
+            alert.showAndWait();
+        }
     }
 
     @FXML
-    private void buttonUpcomingEvents(ActionEvent event) throws IOException {
+    private void buttonUpcomingEvents(ActionEvent event) throws IOException, SQLException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("upcomingEvent.fxml"));
+        Parent root = loader.load();
 
+        upcomingEventController upcomingEventController = loader.getController();
+        upcomingEventController.setId(this.id.getText(), this.club_name.getText());
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Upcoming Event");
+        stage.show();
     }
 
     @FXML
     private void goBac(ActionEvent event) throws IOException, SQLException {
-        FXMLLoader loader = new  FXMLLoader(getClass().getResource("Clubnames.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Clubnames.fxml"));
         Parent root = loader.load();
 
         ClubnamesController clubnamesController = loader.getController();

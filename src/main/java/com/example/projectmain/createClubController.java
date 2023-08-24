@@ -45,9 +45,10 @@ public class createClubController {
             preparedStatement.setString(3, bio.getText());
             preparedStatement.executeUpdate();
 
-            preparedStatement = DB.conn().prepareStatement("INSERT INTO club_member VALUE (?, ?)");
+            preparedStatement = DB.conn().prepareStatement("INSERT INTO club_member VALUE (?, ?, ?)");
             preparedStatement.setString(1, name.getText());
             preparedStatement.setString(2, id.getText());
+            preparedStatement.setBoolean(3, true);
             preparedStatement.executeUpdate();
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
