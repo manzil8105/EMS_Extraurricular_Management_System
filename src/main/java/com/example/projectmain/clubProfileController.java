@@ -86,7 +86,7 @@ public class clubProfileController {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Error!");
             alert.setHeaderText("Permission Denied!");
-            alert.setContentText("You are not an Admin. You can not create an even!");
+            alert.setContentText("You are not an Admin. You can not create an event!");
             alert.showAndWait();
         }
     }
