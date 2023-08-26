@@ -1017,8 +1017,8 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="292" parent="1" name="ExCMS">
-      <IntrospectionTimestamp>2023-08-24.20:39:59</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-08-24.08:39:59</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-08-26.00:33:12</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-08-25.12:33:12</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="293" parent="1" name="mysql.infoschema">
@@ -13384,127 +13384,85 @@ User</ColNames>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="2419" parent="526" name="GRANTEE">
-      <DasType>varchar(292)|0s</DasType>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="2420" parent="526" name="club_name">
+    <column id="2419" parent="526" name="club_name">
       <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="2421" parent="526" name="TABLE_CATALOG">
-      <DasType>varchar(512)|0s</DasType>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="2422" parent="526" name="event_title">
+    <column id="2420" parent="526" name="event_title">
       <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="2423" parent="526" name="TABLE_SCHEMA">
-      <DasType>varchar(64)|0s</DasType>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-    </column>
-    <column id="2424" parent="526" name="event_description">
+    <column id="2421" parent="526" name="event_description">
       <DasType>varchar(256)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="2425" parent="526" name="TABLE_NAME">
-      <DasType>varchar(64)|0s</DasType>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-    </column>
-    <column id="2426" parent="526" name="event_start">
+    <column id="2422" parent="526" name="event_start">
       <DasType>date|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="2427" parent="526" name="COLUMN_NAME">
-      <DasType>varchar(64)|0s</DasType>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-    </column>
-    <column id="2428" parent="526" name="event_end">
+    <column id="2423" parent="526" name="event_end">
       <DasType>date|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="2429" parent="526" name="PRIVILEGE_TYPE">
-      <DasType>varchar(64)|0s</DasType>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-    </column>
-    <column id="2430" parent="526" name="IS_GRANTABLE">
-      <DasType>varchar(3)|0s</DasType>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <NotNull>1</NotNull>
-      <Position>7</Position>
-    </column>
-    <column id="2431" parent="527" name="member_id">
+    <column id="2424" parent="527" name="member_id">
       <DasType>varchar(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="2432" parent="527" name="club_name">
+    <column id="2425" parent="527" name="club_name">
       <DasType>varchar(50)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="2433" parent="527" name="message">
+    <column id="2426" parent="527" name="message">
       <DasType>varchar(250)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="2434" parent="528" name="name">
+    <column id="2427" parent="528" name="name">
       <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="2435" parent="528" name="id">
+    <column id="2428" parent="528" name="id">
       <DasType>varchar(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="2436" parent="528" name="phoneNumber">
+    <column id="2429" parent="528" name="phoneNumber">
       <DasType>varchar(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="2437" parent="528" name="email">
+    <column id="2430" parent="528" name="email">
       <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="2438" parent="528" name="department">
+    <column id="2431" parent="528" name="department">
       <DasType>varchar(10)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="2439" parent="528" name="password">
+    <column id="2432" parent="528" name="password">
       <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="2440" parent="528" name="dp">
+    <column id="2433" parent="528" name="dp">
       <DasType>longblob|0s</DasType>
       <Position>7</Position>
     </column>
-    <index id="2441" parent="528" name="PRIMARY">
+    <index id="2434" parent="528" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="2442" parent="528" name="PRIMARY">
+    <key id="2435" parent="528" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

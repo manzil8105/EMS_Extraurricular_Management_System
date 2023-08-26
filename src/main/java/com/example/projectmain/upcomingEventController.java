@@ -27,7 +27,7 @@ public class upcomingEventController {
         this.club_name.setText(club_name);
         this.id.setText(id);
 
-        String sql = "SELECT * FROM event WHERE club_name = '" + this.club_name.getText() + "'";
+        String sql = "SELECT * FROM event WHERE club_name = '" + this.club_name.getText() + "' ORDER BY event_start";
         ResultSet resultSet = DB.conn().createStatement().executeQuery(sql);
 
         while (resultSet.next()) {
