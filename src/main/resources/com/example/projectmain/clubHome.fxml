@@ -2,6 +2,8 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -12,17 +14,57 @@
             <Font name="Georgia Bold" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="14.0" layoutY="27.0" mnemonicParsing="false" onAction="#goBac" prefHeight="22.0" prefWidth="31.0" style="-fx-background-color: #f7a100;" text="&lt;">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
-      <AnchorPane layoutX="14.0" layoutY="77.0" prefHeight="538.0" prefWidth="871.0" style="-fx-background-color: #f7a100;">
+      <AnchorPane layoutX="16.0" layoutY="71.0" prefHeight="546.0" prefWidth="883.0" style="-fx-background-color: #f7a100;">
          <children>
-            <Button layoutX="497.0" layoutY="135.0" mnemonicParsing="false" onAction="#buttonRegister" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: #181f2b; -fx-background-radius: 30;" text="RegisterForEvent" textFill="WHITE" />
-            <Button layoutX="492.0" layoutY="246.0" mnemonicParsing="false" onAction="#buttonUpcomingEvents" prefHeight="50.0" prefWidth="155.0" style="-fx-background-color: #181f2b; -fx-background-radius: 30;" text="Upcoming events " textFill="WHITE" />
-            <Button layoutX="215.0" layoutY="244.0" mnemonicParsing="false" onAction="#buttonMemberlist" prefHeight="50.0" prefWidth="155.0" style="-fx-background-color: #181f2b; -fx-background-radius: 30;" text="Members" textAlignment="CENTER" textFill="WHITE" />
-            <Button layoutX="207.0" layoutY="137.0" mnemonicParsing="false" onAction="#buttonActivity" prefHeight="44.0" prefWidth="161.0" style="-fx-background-color: #181f2b; -fx-background-radius: 30;" text="Activities" textFill="WHITE" />
+            <Button alignment="CENTER" layoutX="473.0" layoutY="248.0" mnemonicParsing="false" onAction="#buttonRegister" prefHeight="80.0" prefWidth="240.0" stylesheets="@../../../CSS/button2.css" text="𝘾𝙧𝙚𝙖𝙩𝙚 𝙀𝙫𝙚𝙣𝙩" textFill="WHITE" />
+            <Button alignment="CENTER" layoutX="473.0" layoutY="119.0" mnemonicParsing="false" onAction="#buttonUpcomingEvents" prefHeight="80.0" prefWidth="240.0" stylesheets="@../../../CSS/button2.css" text="𝙐𝙥𝙘𝙤𝙢𝙞𝙣𝙜 𝙀𝙫𝙚𝙣𝙩𝙨" textFill="WHITE" />
+            <Button alignment="CENTER" layoutX="188.0" layoutY="244.0" mnemonicParsing="false" onAction="#buttonMemberlist" prefHeight="80.0" prefWidth="240.0" stylesheets="@../../../CSS/button2.css" text="𝙈𝙚𝙢𝙗𝙚𝙧𝙨" textAlignment="CENTER" textFill="WHITE" />
+            <Button alignment="CENTER" layoutX="188.0" layoutY="119.0" mnemonicParsing="false" onAction="#buttonActivity" prefHeight="80.0" prefWidth="240.0" stylesheets="@../../../CSS/button2.css" text="𝘿𝙞𝙨𝙘𝙪𝙨𝙨𝙞𝙤𝙣𝙨" textFill="WHITE" />
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="225.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/icons8-activities-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="486.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/icons8-event-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="225.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/icons8-people-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="503.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/icons8-create-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="112.0" fitWidth="102.0" layoutX="61.0" layoutY="23.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" rotate="-18.4">
+               <image>
+                  <Image url="@../../../icons/icons8-archers-bow-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="126.0" layoutX="43.0" layoutY="310.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/icons8-ai-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="102.0" layoutX="755.0" layoutY="40.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" rotate="24.0">
+               <image>
+                  <Image url="@../../../icons/icons8-camera-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="129.0" fitWidth="108.0" layoutX="723.0" layoutY="367.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/icons8-cricket-66.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="108.0" layoutX="371.0" layoutY="412.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/icons8-football-50.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
       <Label fx:id="id" layoutX="791.0" layoutY="30.0" style="-fx-text-fill: #f7a100;">
@@ -30,5 +72,16 @@
             <Font size="20.0" />
          </font>
       </Label>
+      <Label layoutX="358.0" layoutY="23.0" text="CLUB HOMEPAGE" textFill="#f7a100">
+         <font>
+            <Font name="Century Gothic Bold" size="24.0" />
+         </font>
+      </Label>
+      
+      <Button layoutX="24.0" layoutY="21.0" mnemonicParsing="false" onAction="#goBac" prefHeight="44.0" prefWidth="48.0" stylesheets="@../../../CSS/Button.css" text="&lt;">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

@@ -3,6 +3,8 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -11,7 +13,7 @@
    <children>
       <AnchorPane layoutX="7.0" layoutY="12.0" prefHeight="683.0" prefWidth="849.0" style="-fx-background-color: #181f2b;">
          <children>
-            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#toDoBack" prefHeight="38.0" prefWidth="41.0" style="-fx-background-color: #f7a100;" text="&lt;" />
+            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#toDoBack" prefHeight="38.0" prefWidth="41.0" stylesheets="@../../../CSS/Button.css" text="&lt;" />
             <Label fx:id="id" layoutX="695.0" layoutY="43.0" style="-fx-text-fill: #f7a100;">
                <font>
                   <Font size="20.0" />
@@ -22,6 +24,36 @@
                   <VBox fx:id="vBox" minHeight="400.0" prefWidth="480.0" style="-fx-background-color: #f7a100;" />
                </content>
             </ScrollPane>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="78.0" layoutY="557.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" rotate="-4.9">
+               <image>
+                  <Image url="@../../../icons/icons8-computer-80.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="94.0" fitWidth="92.0" layoutX="659.0" layoutY="576.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" rotate="42.0">
+               <image>
+                  <Image url="@../../../icons/icons8-basketball-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="695.0" layoutY="322.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/icons8-soccer-100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="133.0" fitWidth="130.0" layoutX="23.0" layoutY="315.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" rotate="-22.6">
+               <image>
+                  <Image url="@../../../icons/icons8-piano-80.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="92.0" fitWidth="92.0" layoutX="42.0" layoutY="117.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" rotate="23.0">
+               <image>
+                  <Image url="@../../../icons/icons8-violinist-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="142.0" fitWidth="110.0" layoutX="715.0" layoutY="108.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" rotate="-45.0">
+               <image>
+                  <Image url="@../../../icons/icons8-camera-80.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>

@@ -1,15 +1,19 @@
-package com.example.check22;
+package com.example.projectmain;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
-import javafx.event.ActionEvent;
+import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
@@ -26,6 +30,8 @@ public class PhotoController {
     @FXML private Button previousButton;
     @FXML private Button nextButton;
     @FXML private Button deleteButton;
+    @FXML
+    private Button backButton;
 
     @FXML private TextField searchField;
 
@@ -169,6 +175,17 @@ public class PhotoController {
                 imageView.setImage(null); // Clear the ImageView after search
             }
         }
+    }
+
+
+    @FXML
+    void backOnAction(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
     }
     private boolean isImageFile(File file) {
         String fileName = file.getName();

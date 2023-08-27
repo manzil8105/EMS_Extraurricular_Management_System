@@ -4,6 +4,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -11,7 +13,7 @@
    <children>
       <AnchorPane layoutX="13.0" layoutY="13.0" minHeight="0.0" minWidth="0.0" prefHeight="675.0" prefWidth="770.0" style="-fx-background-color: #f7a100;">
          <children>
-            <Button fx:id="gobacFromMembers" layoutX="14.0" layoutY="34.0" mnemonicParsing="false" onAction="#goback" prefHeight="18.0" prefWidth="102.0" style="-fx-background-color: #181f2b;" text="&lt;--GoBack" textFill="WHITE" />
+            <Button fx:id="gobacFromMembers" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goback" prefHeight="60.0" prefWidth="62.0" stylesheets="@../../../CSS/buttonblue.css" text="&lt;" textFill="WHITE" />
             <Label fx:id="id" layoutX="607.0" layoutY="38.0" style="-fx-text-fill: #181f2b;">
                <font>
                   <Font size="20.0" />
@@ -27,16 +29,46 @@
                   <Font size="16.0" />
                </font>
             </TextField>
-            <TextArea fx:id="bio" layoutX="260.0" layoutY="262.0" prefHeight="100.0" prefWidth="250.0" promptText="bio" wrapText="true">
+            <TextArea fx:id="bio" layoutX="260.0" layoutY="262.0" prefHeight="144.0" prefWidth="250.0" promptText="bio" wrapText="true">
                <font>
                   <Font size="16.0" />
                </font>
             </TextArea>
-            <Button layoutX="285.0" layoutY="437.0" mnemonicParsing="false" onAction="#createClub" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #181f2b; -fx-text-fill: #f7a100; -fx-background-radius: 30;" text="Create Club">
+            <Button layoutX="285.0" layoutY="437.0" mnemonicParsing="false" onAction="#createClub" prefHeight="60.0" prefWidth="200.0" stylesheets="@../../../CSS/buttonblue.css" text="Create Club" textFill="#f7a100">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
+            <ImageView fitHeight="112.0" fitWidth="102.0" layoutX="101.0" layoutY="127.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" rotate="42.3">
+               <image>
+                  <Image url="@../../../icons/icons8-archers-bow-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="126.0" layoutX="29.0" layoutY="397.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" rotate="-18.4">
+               <image>
+                  <Image url="@../../../icons/icons8-ai-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="102.0" layoutX="613.0" layoutY="172.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" rotate="45.0">
+               <image>
+                  <Image url="@../../../icons/icons8-camera-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="129.0" fitWidth="108.0" layoutX="583.0" layoutY="512.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/icons8-cricket-66.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="108.0" layoutX="273.0" layoutY="566.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/icons8-football-50.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="271.0" layoutY="34.0" text="CLUB CREATION" textFill="#181f2b">
+               <font>
+                  <Font name="Century Gothic Bold" size="30.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>

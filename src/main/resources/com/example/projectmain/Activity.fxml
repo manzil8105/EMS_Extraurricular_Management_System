@@ -4,20 +4,22 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #f7a100;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectmain.ActivityController">
    <children>
-      <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="573.0" prefWidth="776.0" style="-fx-background-color: #181f2b;">
+      <AnchorPane layoutX="10.0" layoutY="14.0" prefHeight="573.0" prefWidth="776.0" style="-fx-background-color: #181f2b;">
          <children>
-            <Label fx:id="club_name" layoutX="55.0" layoutY="31.0" style="-fx-text-fill: #f7a100;" text="Label">
+            <Label fx:id="club_name" layoutX="143.0" layoutY="33.0" prefHeight="41.0" prefWidth="81.0" style="-fx-text-fill: #f7a100;" text="Label">
                <font>
-                  <Font size="26.0" />
+                  <Font name="Verdana Italic" size="26.0" />
                </font>
             </Label>
-            <Label fx:id="id" layoutX="633.0" layoutY="31.0" style="-fx-text-fill: #f7a100;" text="Label">
+            <Label fx:id="id" layoutX="666.0" layoutY="19.0" style="-fx-text-fill: #f7a100;" text="Label">
                <font>
                   <Font size="20.0" />
                </font>
@@ -27,7 +29,7 @@
                   <Font size="16.0" />
                </font>
             </TextArea>
-            <Button layoutX="155.0" layoutY="414.0" mnemonicParsing="false" onAction="#post" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #f7a100; -fx-text-fill: #181f2b; -fx-background-radius: 30;" text="Post">
+            <Button alignment="CENTER_RIGHT" layoutX="111.0" layoutY="394.0" mnemonicParsing="false" onAction="#post" prefHeight="50.0" prefWidth="144.0" stylesheets="@../../../CSS/post.css" text="Post">
                <font>
                   <Font size="20.0" />
                </font>
@@ -37,11 +39,26 @@
                   <VBox fx:id="vBox" />
                </content>
             </ScrollPane>
-            <Button layoutX="155.0" layoutY="490.0" mnemonicParsing="false" onAction="#back" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #f7a100; -fx-text-fill: #181f2b; -fx-background-radius: 30;" text="Back">
+            <Button layoutX="133.0" layoutY="488.0" mnemonicParsing="false" onAction="#back" prefHeight="30.0" prefWidth="100.0" stylesheets="@../../../CSS/post.css" text="Back">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="50.0" fitWidth="47.0" layoutX="125.0" layoutY="396.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/icons8-post-50.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="15.0" layoutY="23.0" prefHeight="61.0" prefWidth="115.0" text="𝐂𝐥𝐮𝐛 𝐍𝐚𝐦𝐞 :" textFill="#f7a100">
                <font>
                   <Font size="20.0" />
                </font>
-            </Button>
+            </Label>
+            <Label layoutX="580.0" layoutY="3.0" prefHeight="61.0" prefWidth="47.0" text="𝐈𝐃 :" textFill="#f7a100">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>

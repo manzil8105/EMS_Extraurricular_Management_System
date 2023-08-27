@@ -1,9 +1,16 @@
-package com.example.ai;
+package com.example.projectmain;
 
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.stage.Stage;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -21,6 +28,9 @@ public class Ai_controller {
 
     @FXML
     private Button sendButton;
+
+    @FXML
+    private Button backButton;
 
     public void initialize() {
         sendButton.setOnAction(event -> sendMessage());
@@ -41,6 +51,17 @@ public class Ai_controller {
             inputTextArea.clear();
         }
     }
+    @FXML
+    void backOnAction(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
+
 
     public static String chatGPT(String message) {
         String url = "https://api.openai.com/v1/chat/completions";

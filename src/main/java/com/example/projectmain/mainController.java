@@ -40,6 +40,13 @@ public class mainController {
     @FXML
     private Button chats;
 
+
+    @FXML
+    private Button photoGallery;
+
+    @FXML
+    private Button ai;
+
     public void setUsername(String id) {
         idLabel.setText(id);
     }
@@ -102,6 +109,24 @@ public class mainController {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("Private Files");
+        stage.show();
+    }
+    @FXML
+    void switchToAI(ActionEvent event) throws IOException, SQLException {
+        Parent root = FXMLLoader.load(getClass().getResource("chatgpt.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("XtraCurio");
+        stage.show();
+    }
+    @FXML
+    void switchTophotoGallery(ActionEvent event) throws IOException, SQLException {
+        Parent root = FXMLLoader.load(getClass().getResource("Photo_gallery.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Photo Gallery");
         stage.show();
     }
 
