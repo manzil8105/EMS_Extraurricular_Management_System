@@ -8,26 +8,26 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #f7a100;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectmain.upcomingEventController">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #f7a100;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectmain.upcomingEventController">
     <children>
-        <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="572.0" prefWidth="773.0" style="-fx-background-color: #181f2b;">
+        <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="690.0" prefWidth="1250.0" style="-fx-background-color: #181f2b;">
             <children>
-                <Label fx:id="club_name" layoutX="66.0" layoutY="54.0" style="-fx-text-fill: #f7a100;" text="aaaaa">
+                <Label fx:id="club_name" layoutX="191.0" layoutY="50.0" style="-fx-text-fill: #f7a100;" text="aaaaa">
                     <font>
                         <Font size="24.0" />
                     </font>
                 </Label>
-                <Label fx:id="id" layoutX="644.0" layoutY="56.0" style="-fx-text-fill: #f7a100;" text="aaaaa">
+                <Label fx:id="id" layoutX="1139.0" layoutY="21.0" style="-fx-text-fill: #f7a100;" text="aaaaa">
                     <font>
                         <Font size="20.0" />
                     </font>
                 </Label>
-                <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #f7a100; -fx-text-fill: #181f2b;" text="&lt;&lt;">
+                <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#back" prefHeight="44.0" prefWidth="44.0" stylesheets="@../../../CSS/Button.css" text="&lt;&lt;">
                     <font>
                         <Font size="16.0" />
                     </font>
                 </Button>
-            <ScrollPane layoutX="112.0" layoutY="99.0" prefHeight="450.0" prefWidth="550.0">
+            <ScrollPane layoutX="173.0" layoutY="109.0" prefHeight="556.0" prefWidth="884.0">
                <content>
                   <VBox fx:id="vBox">
                      <padding>
@@ -36,6 +36,16 @@
                   </VBox>
                </content>
             </ScrollPane>
+            <Label layoutX="1064.0" layoutY="6.0" prefHeight="61.0" prefWidth="47.0" text="𝐈𝐃 :" textFill="#f7a100">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="58.0" layoutY="37.0" prefHeight="61.0" prefWidth="115.0" text="𝐂𝐥𝐮𝐛 𝐍𝐚𝐦𝐞 :" textFill="#f7a100">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
             </children>
         </AnchorPane>
     </children>

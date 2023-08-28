@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="780.0" style="-fx-background-color: #f7a100;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectmain.Ai_controller">
+   <children>
+      <AnchorPane layoutX="11.0" layoutY="14.0" prefHeight="610.0" prefWidth="755.0" style="-fx-background-color: #181f2b;">
+         <children>
+            <TextArea fx:id="chatTextArea" layoutX="7.0" layoutY="91.0" prefHeight="399.0" prefWidth="743.0" wrapText="true" />
+            <TextArea fx:id="inputTextArea" layoutX="25.0" layoutY="509.0" prefHeight="83.0" prefWidth="556.0" promptText="Ask any Question!!" wrapText="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextArea>
+            <Button fx:id="sendButton" layoutX="618.0" layoutY="529.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="85.0" stylesheets="@../../../CSS/Button.css" text="Send" />
+            <Label layoutX="315.0" layoutY="37.0" text="XtraCurio" textFill="#eeb720">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Button fx:id="backButton" layoutX="25.0" layoutY="24.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="40.0" prefWidth="40.0" stylesheets="@../../../CSS/Button.css" text="&lt;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

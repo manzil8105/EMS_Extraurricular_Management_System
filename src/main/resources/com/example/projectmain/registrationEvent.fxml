@@ -5,46 +5,82 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #f7a100;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectmain.RegistrationEventController">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #f7a100;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectmain.RegistrationEventController">
    <children>
-      <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="572.0" prefWidth="773.0" style="-fx-background-color: #181f2b;">
+      <AnchorPane layoutX="10.0" layoutY="15.0" prefHeight="690.0" prefWidth="1260.0" style="-fx-background-color: #181f2b;">
          <children>
-            <Label fx:id="club_name" layoutX="66.0" layoutY="54.0" style="-fx-text-fill: #f7a100;">
+            <Label fx:id="club_name" layoutX="148.0" layoutY="26.0" prefHeight="35.0" prefWidth="7.0" style="-fx-text-fill: #f7a100;">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label fx:id="id" layoutX="644.0" layoutY="56.0" style="-fx-text-fill: #f7a100;">
+            <Label fx:id="id" layoutX="1088.0" layoutY="28.0" prefHeight="30.0" prefWidth="7.0" style="-fx-text-fill: #f7a100;">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #f7a100; -fx-text-fill: #181f2b;" text="&lt;&lt;">
+            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="44.0" stylesheets="@../../../CSS/Button.css" text="&lt;&lt;">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <TextField fx:id="eventTitle" layoutX="262.0" layoutY="115.0" prefHeight="40.0" prefWidth="250.0" promptText="event title">
+            <TextField fx:id="eventTitle" layoutX="314.0" layoutY="105.0" prefHeight="44.0" prefWidth="664.0" promptText="event title">
                <font>
                   <Font size="20.0" />
                </font>
             </TextField>
-            <TextArea fx:id="eventDescription" layoutX="262.0" layoutY="170.0" prefHeight="150.0" prefWidth="250.0" promptText="event description">
+            <TextArea fx:id="eventDescription" layoutX="314.0" layoutY="173.0" prefHeight="296.0" prefWidth="664.0" promptText="event description">
                <font>
                   <Font size="20.0" />
                </font>
             </TextArea>
-            <DatePicker fx:id="eventStartID" layoutX="262.0" layoutY="331.0" prefHeight="40.0" prefWidth="250.0" promptText="event start" />
-            <DatePicker fx:id="eventEndID" layoutX="262.0" layoutY="383.0" prefHeight="40.0" prefWidth="250.0" promptText="event end" />
-            <Button layoutX="287.0" layoutY="457.0" mnemonicParsing="false" onAction="#registerEvent" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #f7a100; -fx-text-fill: #181f2b; -fx-background-radius: 30;" text="Register Event">
+            <DatePicker fx:id="eventStartID" layoutX="521.0" layoutY="485.0" prefHeight="40.0" prefWidth="250.0" promptText="event start" />
+            <DatePicker fx:id="eventEndID" layoutX="521.0" layoutY="550.0" prefHeight="40.0" prefWidth="250.0" promptText="event end" />
+            <Button layoutX="544.0" layoutY="632.0" mnemonicParsing="false" onAction="#registerEvent" prefHeight="40.0" prefWidth="200.0" stylesheets="@../../../CSS/Button.css" text="Register Event">
                <font>
-                  <Font size="20.0" />
+                  <Font size="15.0" />
                </font>
             </Button>
+            <Label layoutX="534.0" layoutY="24.0" text="Register Event" textFill="#f7a100">
+               <font>
+                  <Font name="Century Gothic" size="30.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="148.0" layoutY="505.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/icons8-computer-80.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="94.0" fitWidth="92.0" layoutX="1010.0" layoutY="561.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" rotate="39.3">
+               <image>
+                  <Image url="@../../../icons/icons8-basketball-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1071.0" layoutY="310.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/icons8-soccer-100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="22.0" layoutY="310.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" rotate="-32.0">
+               <image>
+                  <Image url="@../../../icons/icons8-piano-80.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="92.0" fitWidth="92.0" layoutX="141.0" layoutY="135.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" rotate="11.3">
+               <image>
+                  <Image url="@../../../icons/icons8-violinist-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="142.0" fitWidth="110.0" layoutX="1091.0" layoutY="94.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" rotate="149.0">
+               <image>
+                  <Image url="@../../../icons/icons8-camera-80.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>
