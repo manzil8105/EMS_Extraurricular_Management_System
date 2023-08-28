@@ -8,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
@@ -31,6 +32,11 @@ public class Ai_controller {
 
     @FXML
     private Button backButton;
+    @FXML
+    private Label id;
+    public void setId(String id) {
+        this.id.setText(id);
+    }
 
     public void initialize() {
         sendButton.setOnAction(event -> sendMessage());
@@ -53,10 +59,16 @@ public class Ai_controller {
     }
     @FXML
     void backOnAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("main.fxml"));
+        Parent root = loader.load();
+
+        mainController mainController = loader.getController();
+        mainController.setUsername(this.id.getText());
+
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setTitle("Home");
         stage.show();
 
     }

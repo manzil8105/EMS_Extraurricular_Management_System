@@ -7,6 +7,6 @@ public class DB {
         return DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/excms",
                 "root",
-                "123456789");
+                "12345678");
     }
 }

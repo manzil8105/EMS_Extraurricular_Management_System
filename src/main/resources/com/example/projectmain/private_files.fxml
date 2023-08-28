@@ -70,6 +70,7 @@
                   <Image url="@../../../icons/icons8-music-48.png" />
                </image>
             </ImageView>
+            <Label fx:id="id" layoutX="1167.0" layoutY="32.0" style="-fx-text-fill: #f7a100;" />
          </children>
       </Pane>
       <TextArea fx:id="messageTextField" prefHeight="37.0" prefWidth="449.0" />

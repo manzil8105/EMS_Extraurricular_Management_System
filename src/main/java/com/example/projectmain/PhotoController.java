@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -23,6 +24,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PhotoController {
+    @FXML
+    private Label id;
     @FXML private ListView<String> photoList;
     @FXML private ImageView imageView;
     @FXML private Button chooseButton;
@@ -40,6 +43,10 @@ public class PhotoController {
 
     private List<File> storedPhotos = new ArrayList<>();
     private File storageDirectory = new File("pic_store"); // Change this to your desired folder path
+
+    public void setId(String id) {
+        this.id.setText(id);
+    }
 
     @FXML
     private void initialize() {
@@ -180,12 +187,17 @@ public class PhotoController {
 
     @FXML
     void backOnAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("main.fxml"));
+        Parent root = loader.load();
+
+        mainController mainController = loader.getController();
+        mainController.setUsername(id.getText());
+
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setTitle("Home");
         stage.show();
-
     }
     private boolean isImageFile(File file) {
         String fileName = file.getName();

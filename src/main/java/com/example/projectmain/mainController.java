@@ -94,7 +94,12 @@ public class mainController {
 
     @FXML
     void privatefiles(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("private_files.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("private_files.fxml"));
+        Parent root = loader.load();
+
+        FileStorageController fileStorageController = loader.getController();
+        fileStorageController.setId(idLabel.getText());
+
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -113,7 +118,12 @@ public class mainController {
     }
     @FXML
     void switchToAI(ActionEvent event) throws IOException, SQLException {
-        Parent root = FXMLLoader.load(getClass().getResource("chatgpt.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("chatgpt.fxml"));
+        Parent root = loader.load();
+
+        Ai_controller aiController = loader.getController();
+        aiController.setId(idLabel.getText());
+
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -122,7 +132,12 @@ public class mainController {
     }
     @FXML
     void switchTophotoGallery(ActionEvent event) throws IOException, SQLException {
-        Parent root = FXMLLoader.load(getClass().getResource("Photo_gallery.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Photo_gallery.fxml"));
+        Parent root = loader.load();
+
+        PhotoController photoController = loader.getController();
+        photoController.setId(idLabel.getText());
+
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);

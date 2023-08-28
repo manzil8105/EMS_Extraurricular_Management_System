@@ -41,6 +41,7 @@
                   <Image url="@../../../icons/icons8-search-64.png" />
                </image>
             </ImageView>
+            <Label fx:id="id" layoutX="1150.0" layoutY="28.0" style="-fx-text-fill: #f7a100;" />
          </children>
       </AnchorPane>
    </children>

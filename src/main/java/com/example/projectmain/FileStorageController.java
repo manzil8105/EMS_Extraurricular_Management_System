@@ -8,10 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -24,6 +21,9 @@ import java.nio.file.StandardCopyOption;
 import java.util.Arrays;
 
 public class FileStorageController {
+
+    @FXML
+    private Label id;
 
     @FXML
     private TextArea messageTextField;
@@ -44,6 +44,10 @@ public class FileStorageController {
     private ObservableList<String> storedFiles = FXCollections.observableArrayList();
     private File selectedFile;
     private File storageFolder = new File("storage_folder");
+
+    public void setId(String id) {
+        this.id.setText(id);
+    }
 
     @FXML
     private void initialize() {
@@ -132,11 +136,16 @@ public class FileStorageController {
 
     @FXML
     void backOnAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("main.fxml"));
+        Parent root = loader.load();
+
+        mainController mainController = loader.getController();
+        mainController.setUsername(this.id.getText());
+
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setTitle("Home");
         stage.show();
-
     }
 }
