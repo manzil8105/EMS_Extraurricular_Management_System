@@ -4,6 +4,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -12,27 +14,62 @@
     <children>
       <Pane prefHeight="389.0" prefWidth="1280.0">
          <children>
-              <Button fx:id="chooseFileButton" layoutX="567.0" layoutY="119.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="130.0" stylesheets="@../../../CSS/Button.css" text="Upload File">
+              <Button fx:id="chooseFileButton" layoutX="544.0" layoutY="119.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="177.0" stylesheets="@../../../CSS/Button.css" text="Upload File">
                <font>
-                  <Font name="Bernard MT Condensed" size="12.0" />
+                  <Font name="Century" size="21.0" />
                </font>
             </Button>
-              <Button fx:id="downloadButton" layoutX="568.0" layoutY="188.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="130.0" stylesheets="@../../../CSS/Button.css" text="Download File">
+              <Button fx:id="downloadButton" layoutX="544.0" layoutY="183.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="177.0" stylesheets="@../../../CSS/Button.css" text="Download File">
                <font>
-                  <Font name="Bernard MT Condensed" size="12.0" />
+                  <Font name="Century" size="21.0" />
                </font>
             </Button>
-              <Button fx:id="refreshButton" layoutX="568.0" layoutY="253.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="130.0" stylesheets="@../../../CSS/Button.css" text="Refresh List">
+              <Button fx:id="refreshButton" layoutX="544.0" layoutY="256.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="177.0" stylesheets="@../../../CSS/Button.css" text="Refresh List">
                <font>
-                  <Font name="Bernard MT Condensed" size="12.0" />
+                  <Font name="Century" size="21.0" />
                </font>
             </Button>
             <Button fx:id="backButton" layoutX="24.0" layoutY="14.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="53.0" prefWidth="54.0" stylesheets="@../../../CSS/Button.css" text="&lt;" />
             <Label alignment="CENTER" layoutX="523.0" layoutY="20.0" prefHeight="53.0" prefWidth="219.0" text="PRIVATE FILES" textFill="#f7a100">
                <font>
-                  <Font size="30.0" />
+                  <Font name="System Bold" size="30.0" />
                </font>
             </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="83.0" layoutY="166.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" rotate="18.4">
+               <image>
+                  <Image url="@../../../icons/icons8-folder-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1002.0" layoutY="30.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/icons8-folder-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="99.0" fitWidth="107.0" layoutX="264.0" layoutY="20.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/icons8-music-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="112.0" layoutX="821.0" layoutY="286.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" rotate="26.6">
+               <image>
+                  <Image url="@../../../icons/icons8-music-24.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="112.0" layoutX="1051.0" layoutY="260.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/icons8-music-24.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="112.0" layoutX="897.0" layoutY="183.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/icons8-music-24.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="99.0" fitWidth="107.0" layoutX="328.0" layoutY="204.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/icons8-music-48.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
       <TextArea fx:id="messageTextField" prefHeight="37.0" prefWidth="449.0" />
